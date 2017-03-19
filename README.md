@@ -1,4 +1,4 @@
-# [Start Bootstrap]- [Angular 2 + Bootstrap ]
+# [Start Bootstrap]- [Angular 2 + Material2 ]
 
 ## Getting Started
 
