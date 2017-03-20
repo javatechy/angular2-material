@@ -66,6 +66,7 @@ export class PaymentComponent  {
   onSubmit({ value, valid }: { value: CustomRequest, valid: boolean }) {
     this.submitted = true;
     this.submittedModel = value;
+    this.model= value;
   }
 }
 
