@@ -12,7 +12,7 @@
         {{ message }}
       </div>
     </div>
-    <button type="submit" class="btn btn-outline btn-success"class="btn btn-outline btn-success" [disabled]="!userForm.valid">Submit</button>
+    <button md-raised-button type="submit" class="btn btn-outline btn-success"class="btn btn-outline btn-success" [disabled]="!userForm.valid">Submit</button>
 </form>
 <br/>
 <div class="row">
@@ -102,3 +102,86 @@
   </div>
 </div>
 </md-card>
+<md-toolbar color="primary">
+  <span>Custom Toolbar</span>
+
+  <md-toolbar-row color="grey" >
+    <span>Second Line</span>
+    <span class="example-spacer"></span>
+    <md-icon class="example-icon">verified_user</md-icon>
+    <mat-toolbar-row>
+      Hello Workd
+    </mat-toolbar-row>
+  </md-toolbar-row>
+
+  <md-toolbar-row>
+    <span>Third Line</span>
+    <span class="example-spacer"></span>
+    <md-icon class="example-icon">favorite</md-icon>
+    <md-icon class="example-icon">delete</md-icon>
+  </md-toolbar-row>
+</md-toolbar>
+
+<p>
+  <md-toolbar>
+    <md-icon class="demo-toolbar-icon">menu</md-icon>
+    <span>Default Toolbar</span>
+
+    <span class="demo-fill-remaining"></span>
+
+    <md-icon>code</md-icon>
+  </md-toolbar>
+</p>
+
+<p>
+  <md-toolbar color="primary">
+    <md-icon class="demo-toolbar-icon">menu</md-icon>
+    <span>Primary Toolbar</span>
+
+    <span class="demo-fill-remaining"></span>
+
+    <md-icon>code</md-icon>
+  </md-toolbar>
+</p>
+
+<p>
+  <md-toolbar color="accent">
+    <md-icon class="demo-toolbar-icon">menu</md-icon>
+    <span>Accent Toolbar</span>
+
+    <span class="demo-fill-remaining"></span>
+
+    <md-icon>code</md-icon>
+  </md-toolbar>
+</p>
+
+<p>
+  <md-toolbar color="accent">
+    <span>Custom Toolbar</span>
+    <md-toolbar-row>
+      <span>Second Line</span>
+    </md-toolbar-row>
+  </md-toolbar>
+</p>
+
+<p>
+  <md-toolbar color="primary">
+    <span>Custom Toolbar</span>
+
+    <md-toolbar-row>
+      <span>Second Line</span>
+
+      <span class="demo-fill-remaining"></span>
+
+      <md-icon class="demo-toolbar-icon">verified_user</md-icon>
+    </md-toolbar-row>
+
+    <md-toolbar-row>
+      <span>Third Line</span>
+
+      <span class="demo-fill-remaining"></span>
+
+      <md-icon class="demo-toolbar-icon">favorite</md-icon>
+      <md-icon class="demo-toolbar-icon">delete</md-icon>
+    </md-toolbar-row>
+  </md-toolbar>
