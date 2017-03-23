@@ -7,6 +7,7 @@ import {PostsService}  from '../services/posts.service';
   selector: 'home',
   // refers to index.html file
   templateUrl:'../html/home.html',
+  styleUrls: ['../css/material.css'],
   providers: [PostsService]
 })
 export class HomeComponent  {
