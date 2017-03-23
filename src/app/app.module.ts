@@ -8,6 +8,7 @@ import { AboutComponent }  from './components/about.component';
 import { HomeComponent }  from './components/home.component';
 import { MaterialModule } from '@angular/material';
 import {routing} from './app.routing'
+import { Md2Module }  from 'md2';
 
 import { HttpModule }  from '@angular/http';
 import {PaymentComponent} from "./components/payment.component";
@@ -17,7 +18,7 @@ import {UserComponent} from "./components/user.component";
 import {MaterialComponent, DialogContent} from "./components/material.component";
 
 @NgModule({
-  imports:      [ BrowserModule,FormsModule,ReactiveFormsModule, HttpModule,routing,MaterialModule],
+  imports:      [ BrowserModule,FormsModule,ReactiveFormsModule, HttpModule,routing,MaterialModule, Md2Module],
   declarations: [ AppComponent,SampleComponent,AboutComponent,HomeComponent,PaymentComponent,TransactionComponent,SysInfoComponent,UserComponent,MaterialComponent,DialogContent],
   bootstrap:    [ AppComponent ],
   entryComponents :[DialogContent]

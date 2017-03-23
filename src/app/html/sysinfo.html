@@ -1,3 +1,6 @@
+
+<!--https://github.com/Promact/md2/blob/master/src/demo-app/accordion/accordion-demo.html-->
+
 <h1>{{name}}</h1>
 <div>
   <div >
@@ -5,48 +8,46 @@
         <md-tab-group>
           <md-tab label="Operator Balance">
             <br/>
-            <md-spinner *ngIf="!showResult && !showError" class="app-spinner"></md-spinner>
             <button (click)="getBalance()" *ngIf="!showError"  md-icon-button>
               <md-icon >cached</md-icon>
             </button>
-
+            <md-spinner *ngIf="!showResult && !showError" class="app-spinner"></md-spinner>
             <div *ngIf="showResult">
-              <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+              <table width="100%" class="success table table-striped table-bordered table-hover dataTable no-footer dtr-inline" id="dataTables-example" role="grid" aria-describedby="dataTables-example_info" style="width: 100%;">
                 <thead>
-                <tr>
-                  <th class="mdl-data-table__cell--non-numeric">Operator Name
+                <tr role="row">
+                  <th class="sorting_asc" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-sort="ascending"
+                      style="width: 171px;">Operator Name
                   </th>
-                  <th class="mdl-data-table__cell--non-numeric">Balance
+                  <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1"
+                      style="width: 207px;">Balance
                   </th>
                 </tr>
                 </thead>
                 <tbody>
 
-                <tr >
-                  <td class="mdl-data-table__cell--non-numeric"><b>Merchant Balance </b></td>
+                <tr class="gradeA odd" role="row" >
+                  <td class="sorting_1"><b>Merchant Balance </b></td>
                   <td class="center">{{ response.operatorBalance.MERCHANT_BALANCE }}</td>
                 </tr>
-                <tr  >
-                  <td class="mdl-data-table__cell--non-numeric"><b>IND01 Balance </b></td>
+                <tr class="gradeA odd" role="row" >
+                  <td class="sorting_1"><b>IND01 Balance </b></td>
                   <td class="center">{{ response.operatorBalance.IND01 }}</td>
                 </tr>
-                <tr >
-                  <td class="mdl-data-table__cell--non-numeric"><b>MTN </b></td>
-                  <td class="center">{{ response.operatorBalance.MTN }}</td>
-                </tr>
-                <tr >
-                  <td class="mdl-data-table__cell--non-numeric"><b>GLO Balance </b></td>
+
+                <tr class="gradeA odd" role="row" >
+                  <td class="sorting_1"><b>GLO Balance </b></td>
                   <td class="center">{{ response.operatorBalance.GLO }}</td>
                 </tr>
-                <tr >
-                  <td class="mdl-data-table__cell--non-numeric"><b>Airtel </b></td>
+                <tr class="gradeA odd" role="row" >
+                  <td class="sorting_1"><b>Airtel </b></td>
                   <td class="center">{{ response.operatorBalance.AR }}</td>
                 </tr>
-                <tr>
-                  <td class="mdl-data-table__cell--non-numeric"><b>ET </b></td>
+                <tr class="gradeA odd" role="row" >
+                  <td class="sorting_1"><b>ET </b></td>
                   <td class="center">{{ response.operatorBalance.ET }}</td>
                 </tr>
-                <tr>
+                <tr class="gradeA odd" role="row" >
                   <td class="sorting_1"><b>FUND </b></td>
                   <td class="center">{{ response.operatorBalance.FUND }}</td>
                 </tr>
@@ -70,16 +71,6 @@
     <!-- /.panel-heading -->
   </div>
 </div>
-<p>
-  <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    Link with href
-  </a>
-  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    Button with data-target
-  </button>
-</p>
-<div class="collapse" id="collapseExample">
-  <div class="card card-block">
-    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-  </div>
-</div>
+
+
+

@@ -5,28 +5,22 @@
       <md-input-container class="app-content example-full-width">
         <input mdInput  formControlName="userIds" placeholder="Enter User ID" md-tooltip="User ID or Msisdn or Access Token" >
       </md-input-container>
-     <!-- <input type="text" class="form-control" formControlName="userIds"  placeholder="Enter User ID/MSISDN/ACCESS TOKEN" />
-      <div class="alert alert-danger" [hidden]="userForm.controls.userIds.valid">UserId/Msisdn/Token is required</div>-->
       <br  *ngIf="showError"/>
       <div class="alert alert-danger" *ngIf="showError">
         {{ message }}
       </div>
     </div>
-    <button md-raised-button type="submit" class="btn btn-outline btn-success"class="btn btn-outline btn-success" [disabled]="!userForm.valid">Submit</button>
+    <button md-raised-button type="submit" [disabled]="!userForm.valid">Submit</button>
 </form>
 <br/>
-<div class="row">
-  <div class="col-lg-12">
-    <div class="panel panel-success">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="false" data-parent="#accordion" (click)="showUserInfo=!showUserInfo">User Information</a>
-        </h4>
-      </div>
-      <div id="collapseOne" class="panel-collapse collapse in"  *ngIf="showUserInfo">
-        <div class="panel-body">
+
+  <md-card>
+    <md2-accordion [multiple]="multiple">
+      <md2-accordion-tab class="test"  header="User Information" [active]="showUserInfo"
+                         [disabled]="!showUserInfo">
+        <div class="panel-body" *ngIf="customResponse.user">
           <div class="row show-grid">
-            <div class="col-md-4 ">Email : <b>{{ customResponse.user.iu_email_id }}</b></div>
+            <div class="col-md-4 " >Email : <b>{{ customResponse.user.iu_email_id }}</b></div>
             <div class="col-md-4 ">User ID :  <b>{{ customResponse.user.iu_user_id }}</b></div>
             <div class="col-md-4 ">Ext ID :  <b> {{ customResponse.user.iu_external_interface_id }}</b></div>
           </div>
@@ -49,18 +43,11 @@
           </div>
           <br/>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-lg-12">
-    <div class="panel panel-success">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="false" data-parent="#accordion" (click)="showPgTransactions=!showPgTransactions">Payments(PG)</a>
-        </h4>
-      </div>
-      <div id="collapseTwo" class="panel-collapse collapse in"  *ngIf="showPgTransactions">
+      </md2-accordion-tab>
+    </md2-accordion>
+   <md2-accordion [multiple]="multiple">
+      <md2-accordion-tab class="test"  header="Payments (PG)" [active]="showPgTransactions"
+                         [disabled]="!showPgTransactions">
         <div class="panel-body">
         <table width="100%" class="table table-striped table-bordered table-hover dataTable no-footer dtr-inline" id="dataTables-example" role="grid" aria-describedby="dataTables-example_info" style="width: 100%;">
           <thead>
@@ -97,91 +84,7 @@
           </tbody>
         </table>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
+      </md2-accordion-tab>
+    </md2-accordion>
+  </md-card>
 </md-card>
-<md-toolbar color="primary">
-  <span>Custom Toolbar</span>
-
-  <md-toolbar-row color="grey" >
-    <span>Second Line</span>
-    <span class="example-spacer"></span>
-    <md-icon class="example-icon">verified_user</md-icon>
-    <mat-toolbar-row>
-      Hello Workd
-    </mat-toolbar-row>
-  </md-toolbar-row>
-
-  <md-toolbar-row>
-    <span>Third Line</span>
-    <span class="example-spacer"></span>
-    <md-icon class="example-icon">favorite</md-icon>
-    <md-icon class="example-icon">delete</md-icon>
-  </md-toolbar-row>
-</md-toolbar>
-
-<p>
-  <md-toolbar>
-    <md-icon class="demo-toolbar-icon">menu</md-icon>
-    <span>Default Toolbar</span>
-
-    <span class="demo-fill-remaining"></span>
-
-    <md-icon>code</md-icon>
-  </md-toolbar>
-</p>
-
-<p>
-  <md-toolbar color="primary">
-    <md-icon class="demo-toolbar-icon">menu</md-icon>
-    <span>Primary Toolbar</span>
-
-    <span class="demo-fill-remaining"></span>
-
-    <md-icon>code</md-icon>
-  </md-toolbar>
-</p>
-
-<p>
-  <md-toolbar color="accent">
-    <md-icon class="demo-toolbar-icon">menu</md-icon>
-    <span>Accent Toolbar</span>
-
-    <span class="demo-fill-remaining"></span>
-
-    <md-icon>code</md-icon>
-  </md-toolbar>
-</p>
-
-<p>
-  <md-toolbar color="accent">
-    <span>Custom Toolbar</span>
-    <md-toolbar-row>
-      <span>Second Line</span>
-    </md-toolbar-row>
-  </md-toolbar>
-</p>
-
-<p>
-  <md-toolbar color="primary">
-    <span>Custom Toolbar</span>
-
-    <md-toolbar-row>
-      <span>Second Line</span>
-
-      <span class="demo-fill-remaining"></span>
-
-      <md-icon class="demo-toolbar-icon">verified_user</md-icon>
-    </md-toolbar-row>
-
-    <md-toolbar-row>
-      <span>Third Line</span>
-
-      <span class="demo-fill-remaining"></span>
-
-      <md-icon class="demo-toolbar-icon">favorite</md-icon>
-      <md-icon class="demo-toolbar-icon">delete</md-icon>
-    </md-toolbar-row>
-  </md-toolbar>
