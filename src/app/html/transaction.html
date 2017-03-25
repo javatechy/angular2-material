@@ -1,5 +1,4 @@
-<h1 class="page-header">{{name}}</h1>
-<md-card>
+<h3 >{{name}}</h3>
 <form [formGroup]="transactionForm" (ngSubmit)="onSubmit(transactionForm)">
     <div class="form-group">
       <md-input-container class="app-content example-full-width">
@@ -17,9 +16,7 @@
   <!--<button type="submit" class="btn btn-outline btn-success"class="btn btn-outline btn-success" [disabled]="!transactionForm.valid">Submit</button>-->
 </form>
 <br/>
-
-  <md-card>
-    <md2-accordion [multiple]="multiple">
+  <md2-accordion [multiple]="multiple">
       <md2-accordion-tab class="test"  header="Transaction(PG)" [active]="showPgTransaction"
                          [disabled]="!showPgTransaction">
         <div class="panel-body" *ngIf="customResponse.pgTransaction">
@@ -128,6 +125,3 @@
         </div>
       </md2-accordion-tab>
     </md2-accordion>
-  </md-card>
-
-    </md-card>

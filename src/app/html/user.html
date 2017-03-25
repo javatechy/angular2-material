@@ -1,5 +1,4 @@
-<h1 class="page-header">{{name}}</h1>
-<md-card>
+<h3 >{{name}}</h3>
 <form [formGroup]="userForm" (ngSubmit)="onSubmit(userForm)">
     <div class="form-group">
       <md-input-container class="app-content example-full-width">
@@ -14,7 +13,6 @@
 </form>
 <br/>
 
-  <md-card>
     <md2-accordion [multiple]="multiple">
       <md2-accordion-tab class="test"  header="User Information" [active]="showUserInfo"
                          [disabled]="!showUserInfo">
@@ -86,5 +84,3 @@
         </div>
       </md2-accordion-tab>
     </md2-accordion>
-  </md-card>
-</md-card>
