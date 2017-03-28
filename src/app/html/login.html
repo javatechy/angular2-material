@@ -1,0 +1,16 @@
+<h3>{{name}}</h3>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)" x-position="center" y-position="center">
+    <div class="form-group">
+      <md-input-container class="app-content example-full-width">
+        <input mdInput  formControlName="userName" placeholder="User Name">
+      </md-input-container><br/>
+      <md-input-container class="app-content example-full-width">
+        <input mdInput  type="password" formControlName="password" placeholder="Password" >
+      </md-input-container>
+      <br  *ngIf="showError"/>
+      <div class="alert alert-danger" *ngIf="showError">
+        {{ message }}
+      </div>
+    </div>
+    <button md-raised-button type="submit"  color="primary" [disabled]="!loginForm.valid">Submit</button>
+</form>

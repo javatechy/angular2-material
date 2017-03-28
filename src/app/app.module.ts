@@ -16,10 +16,11 @@ import {TransactionComponent} from "./components/transaction.component";
 import {SysInfoComponent} from "./components/sys.info";
 import {UserComponent} from "./components/user.component";
 import {MaterialComponent, DialogContent} from "./components/material.component";
+import {LoginComponent} from "./components/login.component";
 
 @NgModule({
   imports:      [ BrowserModule,FormsModule,ReactiveFormsModule, HttpModule,routing,MaterialModule, Md2Module],
-  declarations: [ AppComponent,SampleComponent,AboutComponent,HomeComponent,PaymentComponent,TransactionComponent,SysInfoComponent,UserComponent,MaterialComponent,DialogContent],
+  declarations: [ AppComponent,SampleComponent,AboutComponent,HomeComponent,PaymentComponent,TransactionComponent,SysInfoComponent,UserComponent,MaterialComponent,DialogContent,LoginComponent],
   bootstrap:    [ AppComponent ],
   entryComponents :[DialogContent]
 })

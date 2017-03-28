@@ -3,6 +3,7 @@
  */
 export class CustomRequest {
   constructor(public orderNumbers?: string,
-              public userIds?: string){
+              public userIds?: string,public userName?: string,
+              public password?: string){
   }
 }

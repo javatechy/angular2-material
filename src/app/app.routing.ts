@@ -11,6 +11,7 @@ import   {TransactionComponent } from  './components/transaction.component';
 import   {SysInfoComponent } from  './components/sys.info';
 import   {UserComponent } from  './components/user.component';
 import {MaterialComponent} from "./components/material.component";
+import {LoginComponent} from "./components/login.component";
 
 const  appRoutes: Routes =[
   {
@@ -19,6 +20,9 @@ const  appRoutes: Routes =[
   },{
     path:'sample',
     component: SampleComponent
+  },{
+    path:'login',
+    component: LoginComponent
   },{
     path: 'about',
     component: AboutComponent
