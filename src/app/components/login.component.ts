@@ -1,9 +1,11 @@
 // Main app compnent
 import { Component } from '@angular/core';
 import {PostsService}  from '../services/posts.service';
+import {Http, Headers, RequestOptions, RequestMethod} from '@angular/http';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import {CustomRequest} from "../model/CustomRequest";
 import {CustomResponse} from "../model/CustomResponse";
+import {GoogleSignInSuccess, GoogleSignInComponent} from 'angular-google-signin';
 
 // Decorator
 @Component({
@@ -13,6 +15,7 @@ import {CustomResponse} from "../model/CustomResponse";
   providers: [PostsService]
 })
 export class LoginComponent  {
+  private myClientId: string = '456327648812-qikdfg2vpu4ancr2a3bt933k2tfdgutj.apps.googleusercontent.com';
   multiple: boolean = false;
   name :string;
   loginForm: FormGroup;
@@ -35,6 +38,7 @@ export class LoginComponent  {
       password:     [this.model.password, Validators.required]
     });
   }
+
 
   onSubmit({ value, valid }: { value: CustomRequest, valid: boolean }) {
     console.log(JSON.stringify(value));

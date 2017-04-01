@@ -17,10 +17,12 @@ import {SysInfoComponent} from "./components/sys.info";
 import {UserComponent} from "./components/user.component";
 import {MaterialComponent, DialogContent} from "./components/material.component";
 import {LoginComponent} from "./components/login.component";
+import {GSigninComponent} from "./components/gsigin.component";
+/*import {GoogleSignInComponent} from "angular-google-signin";*/
 
 @NgModule({
   imports:      [ BrowserModule,FormsModule,ReactiveFormsModule, HttpModule,routing,MaterialModule, Md2Module],
-  declarations: [ AppComponent,SampleComponent,AboutComponent,HomeComponent,PaymentComponent,TransactionComponent,SysInfoComponent,UserComponent,MaterialComponent,DialogContent,LoginComponent],
+  declarations: [ AppComponent,SampleComponent,GSigninComponent, AboutComponent,HomeComponent,PaymentComponent,TransactionComponent,SysInfoComponent,UserComponent,MaterialComponent,DialogContent,LoginComponent],
   bootstrap:    [ AppComponent ],
   entryComponents :[DialogContent]
 })

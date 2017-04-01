@@ -1,6 +1,3 @@
-/**
- * Created by deepak.kumar2 on 3/8/2017.
- */
 import {ModuleWithProviders} from '@angular/core';
 import {Routes,RouterModule} from '@angular/router';
 import   {SampleComponent } from  './components/sample.component';
@@ -12,6 +9,7 @@ import   {SysInfoComponent } from  './components/sys.info';
 import   {UserComponent } from  './components/user.component';
 import {MaterialComponent} from "./components/material.component";
 import {LoginComponent} from "./components/login.component";
+import {GSigninComponent} from "./components/gsigin.component";
 
 const  appRoutes: Routes =[
   {
@@ -29,6 +27,9 @@ const  appRoutes: Routes =[
   }, {
     path: 'home',
     component: HomeComponent
+  },{
+    path:'gsignin',
+    component: GSigninComponent
   }, {
     path: 'payment',
     component: PaymentComponent
