@@ -1,9 +1,10 @@
 import {Component, ElementRef, AfterViewInit} from '@angular/core';
+import {Router} from "@angular/router";
 declare const gapi: any;
 
 @Component({
   selector: 'google-signin',
-  template: '<button id="googleBtn">Google Sign-In</button>'
+  template: '<button id="googleBtn" md-raised-button md-tooltip="Sign in With Google Account" ><md-icon>Google</md-icon>Sign in With Google Account</button>'
 })
 export class GSigninComponent implements AfterViewInit {
 
@@ -40,15 +41,15 @@ export class GSigninComponent implements AfterViewInit {
         console.log('Name: ' + profile.getName());
         console.log('Image URL: ' + profile.getImageUrl());
         console.log('Email: ' + profile.getEmail());
+        console.log('Email: ' + profile.getId());
         //YOUR CODE HERE
-
 
       }, function (error:any) {
         console.log(JSON.stringify(error, undefined, 2));
       });
   }
 
-  constructor(private element: ElementRef) {
+  constructor(private element: ElementRef,private router: Router) {
     console.log('ElementRef: ', this.element);
   }
 

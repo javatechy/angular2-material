@@ -25,7 +25,6 @@
       '@angular/material': 'npm:@angular/material/bundles/material.umd.js',
       // other libraries
       'rxjs':                      'npm:rxjs',
-      'angular-google-signin' : 'npm:angular-google-signin',
       'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
       'md2': 'node_modules/md2/bundles/md2.umd.js'
     },
