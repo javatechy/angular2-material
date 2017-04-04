@@ -49,7 +49,8 @@ export class UserComponent  {
       this.showUserInfo  = false;
       this.customResponse = posts
       console.log("Status =>"+JSON.stringify(this.customResponse.status));
-      console.log("Value sof statts: ",JSON.stringify(this.customResponse.pgTransactions));
+        console.log("Value user: ",JSON.stringify(this.customResponse.user));
+        console.log("Value sof statts: ",JSON.stringify(this.customResponse.pgTransactions));
       if(posts.status=='A500'){
         this.message  ="No Data Found"
         this.showError=true;
