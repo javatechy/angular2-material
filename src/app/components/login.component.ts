@@ -5,7 +5,6 @@ import {Http, Headers, RequestOptions, RequestMethod} from '@angular/http';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import {CustomRequest} from "../model/CustomRequest";
 import {CustomResponse} from "../model/CustomResponse";
-import {GoogleSignInSuccess, GoogleSignInComponent} from 'angular-google-signin';
 
 // Decorator
 @Component({
